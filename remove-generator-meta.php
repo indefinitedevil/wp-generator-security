@@ -18,9 +18,6 @@ class Generator_Security {
         add_filter('get_the_generator_rdf', array(self::class, 'remove_generator'), 99);
         add_filter('get_the_generator_comment', array(self::class, 'remove_generator'), 99);
         add_filter('get_the_generator_export', array(self::class, 'remove_generator'), 99);
-
-        add_action('wp_enqueue_scripts', array(self::class, 'enqueue_scripts'));
-        //add_action('admin_enqueue_scripts', array(self::class, 'enqueue_scripts'));
     }
 
     public static function remove_generator() {
